@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'Hanging';
+    src: url(17575.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.gameContainer{
+    min-width: 100vw;
+    min-height: 100vh;
+    box-shadow: inset 0 0 70px 10px gray;
+    position: relative;
+    background-color: lightgray;
+}
+
+.cableLamp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.lamp{
+    width: 140px;
+    height: 194px;
+    position: absolute;
+    top: -28px;
+    left: 627px;
+    animation: flicker 10s infinite;
+}
+@keyframes flicker{
+    15%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0.6;
+    }
+    22%{
+        opacity: 0.8;
+    }
+    25%{
+        opacity: 0.6;
+    }
+    28%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+
+.menuBlock, .levelBlock{
+    width: 550px;
+    height: 530px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.my-btn{
+    border-width: 2px;
+    margin: 10px;
+    font-size: 23px;
+}
+.my-btn:hover{
+    color: yellow;
+}
+.my-btn:focus{
+    box-shadow: none;
+}
+.level-btn{
+    width: 100px;
+    height: 80px;
+}
+.level-passed-btn{
+    background-color: #ffffb6;
+}
+.level-passed-btn:hover{
+    background-color: #343a40;
+}
+
+
+
+.menuHeading, .levelHeading{
+    font-family: 'Hanging';
+    font-size: 70px;
+    text-align: center;
+}
+.menuHeading::selection, .levelHeading::selection{
+    background-color: transparent;
+}
+.activeHeading{
+    color: yellow;
+    text-shadow: 3px 3px 10px black;
+    animation: ignite 10s infinite;
+}
+.activeHeading::selection{
+    color: yellow;
+}
+@keyframes ignite{
+    15%{
+        color: rgba(255, 255, 0, 1);
+    }
+    20%{
+        color: rgba(255, 255, 0, 0.8);
+    }
+    22%{
+        color: rgba(255, 255, 0, 0.3);
+    }
+    25%{
+        color: rgba(255, 255, 0, 0.6);
+    }
+    28%{
+        color: rgba(255, 255, 0, 1);
+    }
+    100%{
+        color: rgba(255, 255, 0, 1);
+    }
+}
+.nonActiveHeading{
+    color: #343a40;
+    text-shadow: 3px 3px 10px #2b2b2b;
+}
+.nonActiveHeading::selection{
+    color: #343a40;
+}
+
+
+
+
+.instruction, .levelNumber, .moves{
+    font-size: 25px;
+    text-align: center;
+    color: #343a40;
+}
+.instruction::selection, .levelNumber::selection, .moves::selection{
+    background-color: transparent;
+    color: #343a40;
+}
+
+
+
+.gameLevel{
+    width: 360px;
+    height: 288px;
+    margin: auto;
+}
+
+.gameBrick{
+    width: 72px;
+    height: 72px;
+    background-image: url(bg.png);
+}
+
+
+
+
+
+.hidden{
+    display: none;
+}
+
+.unvisible{
+    visibility: hidden;
+}
